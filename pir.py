@@ -9,8 +9,8 @@ def handle_interrupt(pin):
   global interrupt_pin
   interrupt_pin = pin 
 
-led = Pin(12, Pin.OUT)
-pir = Pin(14, Pin.IN)
+led = Pin(23, Pin.OUT)
+pir = Pin(5, Pin.IN)
 
 pir.irq(trigger=Pin.IRQ_RISING, handler=handle_interrupt)
 
